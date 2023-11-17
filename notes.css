@@ -32,3 +32,8 @@ body {
     font-weight: bold;
     color: white;
 }
+
+p {
+    color: lightcoral;
+    font-weight: bold;
+}
