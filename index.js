@@ -1,8 +1,8 @@
 // Create two variables:
 // myLeads -> should be assigned to an empty array
 // inputEl -> should be assigned to the text input field
-let myLeads = [];
-// let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
+// let myLeads = [];
+let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 
@@ -18,3 +18,6 @@ inputBtn.addEventListener("click", function () {
 })
 
 // Log out the items in the myLeads array using a for loop 
+for (i = 0; i < myLeads.length; i++) {
+    console.log(myLeads[i])
+}
