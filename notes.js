@@ -2,8 +2,15 @@
 // 2. Add a click event listener to the box 
 // 3. Log out "I want to open the box!" when it's clicked
 
-let boxBtn = document.querySelector("#box")
+// let boxBtn = document.querySelector("#box")
 
-boxBtn.addEventListener("click", function () {
-    console.log("I want to open the box!")
-})
+// boxBtn.addEventListener("click", function () {
+//     console.log("I want to open the box!")
+// })
+
+
+// Use.innerHTML to render a Buy!button inside the div container
+
+let divEl = document.getElementById("container")
+
+divEl.innerHTML += "<button>Buy!</button>"
