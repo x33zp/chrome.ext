@@ -21,5 +21,9 @@ inputBtn.addEventListener("click", function () {
 // Log out the items in the myLeads array using a for loop 
 // Render the leads in the unordered list using ulEl.textContent
 for (i = 0; i < myLeads.length; i++) {
-    ulEl.innerHTML += `<li>${myLeads[i]}</li>`
+    // ulEl.innerHTML += `<li>${myLeads[i]}</li>`
+    /// another method of add lists instead of using .innerHTML
+    const li = document.createElement("li")
+    li.innerText = myLeads[i]
+    ulEl.append(li)
 }
