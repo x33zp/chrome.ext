@@ -6,6 +6,9 @@ let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 
+// 2. Grab the unordered list and store it in a const variable called ulEl
+const ulEL = document.getElementsById("ul-el")
+
 // Push the value "www.awesomelead.com" to myArray when the input button is clicked
 
 inputBtn.addEventListener("click", function () {
