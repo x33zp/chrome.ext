@@ -30,6 +30,12 @@ button {
     font-weight: bold;
 }
 
+#delete-btn {
+    background: transparent;
+    color: #5f9341;
+    border: 1px solid #5f9341;
+}
+
 /* STYLE THE LIST ACCORDING TO THE DESIGN */
 ul {
     list-style: none;
