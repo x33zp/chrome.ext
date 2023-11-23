@@ -1,19 +1,16 @@
-// Create two variables:
-// myLeads -> should be assigned to an empty array
-// inputEl -> should be assigned to the text input field
 let myLeads = [];
-
-// let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
-// 1. Store the delete button in a deleteBtn variable
 const deleteBtn = document.getElementById("delete-btn")
+const tabBtn = document.getElementById("tab-btn")
 
 // Get the leads from the localStorage - PS: JSON.parse()
 // Store it in a variable, leadsFromLocalStorage
 // Log out the variable
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+
+
 // console.log(leadsFromLocalStorage)
 // 1. Check if leadsFromLocalStorage is truthy
 // 2. If so, set myLeads to its value and call renderLeads()
@@ -21,6 +18,21 @@ if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+
+// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
+tabBtn.addEventListener("click", function () {
+    // Grab url of the current tab
+    chrome.tabs.query({
+        active: true,
+        currentWindow: true
+    }, function (tabs) {
+        // Save the url instead of logging it out
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        // console.log(tabs[0].url)
+        render(myLeads)
+    })
+})
 
 // 1. Create a variable, listItems, to hold all the HTML for the list items
 // Assign it to an empty string to begin with
